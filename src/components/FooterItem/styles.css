@@ -1,0 +1,28 @@
+.footerItem{
+    min-width: 7rem;
+}
+  
+.footerItem p {
+    width: auto;
+    object-fit: contain;
+    font-size: 14px;
+    color: var(--nav-bar-text-color);    
+    margin-bottom: 1.5rem;
+}
+
+.footerItem  .paragrafo-footer {
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    color: var(--nav-bar-text-color);
+    margin-bottom: 2rem;
+
+}
+
+
+.paragrafo-footer a {
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--action-color);
+
+}

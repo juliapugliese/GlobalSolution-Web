@@ -1,0 +1,21 @@
+.default{
+    padding: 10px 30px;
+    background-color: cadetblue;
+    color: white;
+    border-style: none;
+    border-radius: 20px;
+}
+
+.secondary{
+    padding: 20px 40px;
+    background-color: royalblue;
+    color: white;
+    border-style: none;
+}
+.warning{
+    padding: 30px;
+    background-color: rosybrown;
+    color: black;
+    border-style: none;
+    border-radius: 50%;
+}

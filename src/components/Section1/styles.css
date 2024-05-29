@@ -1,0 +1,43 @@
+.section1 {
+    text-align: center;
+    background-image: url(/pexels-francesco-ungaro-3172278.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: -10rem;
+    padding: 5rem 10rem;
+    min-height: 20rem;
+    justify-content: center;
+}
+
+.section1 > h2:first-child {
+    color: var(--action-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 50px;
+    font-family: system-ui;
+    line-height: 60px;
+    font-weight: 500;
+}
+
+.section1 > p {
+    font-size: 25px;
+    color: var(--text-light);
+    line-height: 60px;
+    letter-spacing: 3px;
+}
+.section1 .social-media{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    grid-gap: 2rem;
+    align-self: center;
+}
+
+@media screen and (max-width: 1560px) {
+    .section1 .social-media{
+        width: 70%;
+        grid-gap: 3.5rem;
+    }
+}
