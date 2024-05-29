@@ -72,6 +72,7 @@ header .ul2 li a {
     font-size: 12px;
     font-weight: 300;
     color: var(--bg-primary);
+    vertical-align: text-top;
 
 }
 
@@ -79,7 +80,7 @@ header .ul2 li{
     box-shadow: 0 0 0 1px var(--action-color);
     border-radius: 3rem;
     padding: 5px 15px;
-    align-self: center;
+    align-items: center;
     
 }
 
@@ -172,6 +173,11 @@ header nav :first-child{
     }
     header .nav.active .hamburguer::before, header .nav.active .hamburguer::after{
         background-color: var(--text-light);
+    }
+}
+@media (max-width: 740px) {
+    .section1 {
+        background-size: contain;
     }
 }
 

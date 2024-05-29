@@ -10,6 +10,7 @@ export function Header() {
         <header>
             <div>
                 <ul className="ul2">
+                    <NavItems link="" text="+55 (11) 98170-0028 "/>                      
                     <NavItems id="icone-busca" link="" img={<img className="logo-barra-pesquisa" src="search-icon2.svg" alt="icone de lupa"/>}/>
                     <NavItems id="login" link="login" text="Login"/>
                 </ul>
@@ -22,10 +23,9 @@ export function Header() {
                     <ul className="ul1">
                         <NavItems link="" text="Nossa Campanha"/>
                         <NavItems link="" text="O Nosso Propósito"/>
-                        <NavItems link="" text="Nossos Parceiros"/>
+                        <NavItems link="" text="Parceiros"/>
                         <NavItems link="devteam" text="Suporte"/>
                         <NavItems link="" text="Participe"/>
-
                     </ul>
                 </div>
 

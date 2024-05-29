@@ -1,0 +1,17 @@
+.proposal {
+    display: flex;
+    flex-direction: row;
+}
+.proposal img{
+    object-fit: cover;
+    width: 50vw;
+    height: 60rem;
+}
+
+
+@media screen and (max-width: 1560px) {
+    .proposal .social-media{
+        width: 70%;
+        grid-gap: 3.5rem;
+    }
+}

@@ -1,0 +1,25 @@
+.section2 {
+    text-align: center;
+    padding: 4rem 10rem;
+    min-height: 20rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+}
+
+.section2 > h2:first-child {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 40px;
+    font-family: system-ui;
+    line-height: 60px;
+    font-weight: 400;
+}
+
+.section2 > p {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 35px;
+    max-width: 70%;
+}
+
