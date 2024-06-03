@@ -14,7 +14,7 @@ header {
 header nav {
     display: flex;
     justify-content: center;
-    padding: 10px 12% 10px 10%;   
+    padding: 18px 12% 18px 10%;   
     font-weight: 500; 
 }
 
@@ -88,20 +88,6 @@ header .ul2 li{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #logo img {
     max-width: 12rem;
     display: block;
@@ -110,17 +96,12 @@ header .ul2 li{
 header nav #logo{
     background-color: var(--bg-primary);
     border-radius: 3rem;   
-    padding: 16px 34px;
+    padding: 9px 25px;;
     margin-right: 8rem;
     z-index: 1;
 
 }
 
-header nav #logo:hover{
-    /* box-shadow: 0 0 0 1px var(--box-background-color); */
-    /* background-color: var(--box-background-color); */
-
-}
 header nav :first-child{
     display: flex;
 }

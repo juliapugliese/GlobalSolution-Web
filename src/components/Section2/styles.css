@@ -1,6 +1,6 @@
 .section2 {
     text-align: center;
-    padding: 4rem 10rem;
+    padding: 4rem 10%;
     min-height: 20rem;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,6 @@
     font-size: 16px;
     color: var(--text-light);
     line-height: 35px;
-    max-width: 70%;
+    max-width: 80%;
 }
 

@@ -1,6 +1,7 @@
 'use client'
 import "./styles.css"
 import NavItems from "../NavItems";
+import Link from "next/link";
 
 
 
@@ -8,18 +9,23 @@ export function Section1() {
     return (
 
         <section className="section1">
-
-          <h2>Nosso Proposito</h2>
-          <p>A Oceana se dedica à proteção e restauração dos oceanos em uma escala global.</p>
+          {/* <Link href={""}>
+            <img src="logo.svg" alt="" />
+          </Link>
+          <p>
+            A Blue Future visa garantir que as atividades humanas nos oceanos sejam 
+            ecologicamente responsáveis, socialmente inclusivas e 
+            economicamente viáveis a longo prazo.
+          </p>
 
           <div className="social-media">
             <ul>
-              <NavItems id="icone-busca" link="" img={<img className="logo-barra-pesquisa" src="search-icon2.svg" alt="icone de lupa"/>}/>
-              <NavItems id="icone-busca" link="" img={<img className="logo-barra-pesquisa" src="search-icon2.svg" alt="icone de lupa"/>}/>
-              <NavItems id="icone-busca" link="" img={<img className="logo-barra-pesquisa" src="search-icon2.svg" alt="icone de lupa"/>}/>
+              <NavItems link="" img={<img className="logo-redes-sociais" src="instagram-logo.svg" alt="logo instagram"/>}/>
+              <NavItems link="" img={<img className="logo-redes-sociais" src="logo-facebook.svg" alt="logo facebook"/>}/>
+              <NavItems link="" img={<img className="logo-redes-sociais" src="x-logo.svg" alt="logo do x, antigo twitter"/>}/>
             </ul>
             
-          </div>
+          </div> */}
         </section>
     );
 }
