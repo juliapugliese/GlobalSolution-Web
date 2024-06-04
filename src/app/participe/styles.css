@@ -1,0 +1,115 @@
+.pagina-cadastro{
+    padding: 5rem 0 5rem 9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 3rem;
+    
+}
+
+.pagina-cadastro >:first-child{
+    width: 45%;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.pagina-cadastro > div > img{
+    max-width: 12rem;
+}
+.pagina-cadastro > :first-child > div p{
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.pagina-cadastro > :first-child > div ul li {
+    list-style: disc;
+    margin-left: 17px;
+    line-height: 26px;
+}
+.pagina-cadastro > :first-child > div > .botoes{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.pagina-cadastro > :first-child  > h2{
+    font-weight: bold;
+    color: var(--text-light);
+    font-size: 35px;
+    line-height: 55px;
+    max-width: 50rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.pagina-cadastro  > :first-child div > #saiba-mais, 
+.pagina-cadastro  > :first-child div > #teste-gratis-section,
+.pagina-cadastro .form .input-field > input,
+.pagina-cadastro .form .submit-button
+{
+    box-shadow: 0 0 0 1px var(--text-light);
+    border-radius: 3rem;
+    padding: 10px 20px;
+    border-style: none;
+}
+
+.pagina-cadastro  > :first-child > div #saiba-mais a{
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.pagina-cadastro  > :first-child > div #teste-gratis-section a{
+    font-weight: 500;
+
+    color: var(--action-color);
+}
+
+.pagina-cadastro  > :first-child > div #teste-gratis-section{
+    background-color: var(--text-light);
+}
+
+.pagina-cadastro .form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    text-align: center;
+}
+.pagina-cadastro .form h3{
+    color: var(--text-light);
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.pagina-cadastro .form .input-field > input{
+    min-width: 14rem;
+    font-family: inherit;
+    width: 60%;
+
+}
+
+.pagina-cadastro .form .submit-button{
+    border-style: none;
+    background-color: transparent;
+    color: var(--text-light);
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    width: 30%;
+    min-width: 8rem;
+    align-self: center;
+}
+
+@media (max-width: 1200px) {
+    .pagina-cadastro{
+        gap: 7rem;
+        justify-content: center;
+        padding: 7rem 0;
+    }
+}

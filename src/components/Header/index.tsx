@@ -25,7 +25,7 @@ export function Header() {
                         <NavItems link="" text="O Nosso Propósito"/>
                         <NavItems link="" text="Parceiros"/>
                         <NavItems link="devteam" text="Suporte"/>
-                        <NavItems link="" text="Participe"/>
+                        <NavItems link="participe" text="Participe"/>
                     </ul>
                 </div>
 
