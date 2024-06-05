@@ -1,10 +1,11 @@
 .section1 {
     text-align: center;
     background-image: url(/pexels-francesco-ungaro-3181207.jpg);
+    background-position: 0 -9rem;
     background-size: cover;
     background-attachment: fixed;
     padding: 5rem 10%;
-    min-height: 20rem;
+    min-height: 10rem;
     justify-content: center;
     background-repeat: no-repeat;
 }

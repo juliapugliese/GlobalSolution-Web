@@ -11,9 +11,11 @@
     display: flex;
     flex-direction: row;
     gap: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .devteam h1, .devteam > a {
-    font-size: 40px;
+    font-size: 35px;
     color: var(--text-light);
     font-family: inherit;
     font-weight: 600;
@@ -33,8 +35,15 @@
 .devteam a{
     color: var(--text-light);
     text-decoration: underline;
+    font-size: 20px;
 }
 
 .devteam > div > div h3{
     font-size: 18px;
+}
+
+@media (max-width: 1100px) {
+    .devteam > div{
+        width: 60%;
+    }
 }
