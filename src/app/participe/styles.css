@@ -11,12 +11,6 @@
     background-repeat: no-repeat;
     height: 100%;    
 }
-.pagina-cadastro li{
-    text-shadow: #00000087;
-}
-.pagina-cadastro p{
-
-}
 .pagina-cadastro > div:first-child{
     width: 45%;
     color: var(--text-light);
@@ -31,17 +25,19 @@
 }
 .pagina-cadastro > div:first-child > div p{
     margin-top: 3rem;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: 500;
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 14px #000000;
 }
 .pagina-cadastro > div:first-child .bg-b{
-    background-color: #00000087;
-}
+    background-image: radial-gradient(ellipse, #000000b3, #00000005, #00000000);}
 
 .pagina-cadastro > div:first-child > div ul li {
     list-style: disc;
     margin-left: 17px;
     line-height: 26px;
+    text-shadow: 1px 1px 14px #000000;
 }
 .pagina-cadastro > div:first-child > div > .botoes{
     display: flex;
@@ -104,6 +100,7 @@
     font-size: 21px;
     font-weight: 600;
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 30px #27579d;
 }
 
 .pagina-cadastro .form .input-field > input{
