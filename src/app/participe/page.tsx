@@ -73,7 +73,7 @@ export default function Cadastro() {
           "denuncia": {
             "descricao": form.descricao,
             "data": Date.now(),
-            "localizacao": localizacao ? { latitude: localizacao.latitude, longitude: localizacao.longitude } : null,
+            "localizacao": localizacao? `${localizacao.latitude},${localizacao.longitude}` : null,
             "tipoIncidente": form.tipoIncidente,
             "origemResiduo": form.origemResiduo,
             "recorrenciaProblema": form.recorrenciaProblema,
