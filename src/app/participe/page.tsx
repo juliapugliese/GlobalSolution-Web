@@ -105,30 +105,27 @@ export default function Cadastro() {
   return (
     <div className="pagina-cadastro">
       <div>
-        <img src="salesforce-logo.png" alt="Logo da SalesForce" />
-        <h2>Experimente nossa solução completa de CRM e vendas, grátis por 30 dias.</h2>
-        <MapComponent/>
+        <h2>A BlueFuture usa a sua localização em tempo real para coletar os dados do local do incidente.</h2>
+        <MapComponent />
         <div>
-          <p>Com o Sales Cloud Professional Edition, você tem acesso a:</p>
-          <ul>
-            <li>Dados pré-carregados e recursos para integrar os dados da sua empresa;</li>
-            <li>Processos, relatórios e dashboards pré-configurados;</li>
-            <li>Experiências guiadas para representantes, líderes e gestores de vendas;</li>
-            <li>Guias e outros materiais sobre boas práticas de vendas;</li>
-            <li>Onboarding integrado, treinamentos e webinars online;</li>
-            <li>Configuração de pontuação e roteamento de leads;</li>
-            <li>Ferramentas para automação de tarefas recorrentes;</li>
-            <li>Uma visão completa da performance de seus representantes e equipes de vendas.</li>
-          </ul>
+          <div className="bg-b">
+            <p>Fornecendo os dados do incidente você contribue para:</p>
+            <ul>
+              <li>Dados pré-carregados e recursos para integrar os dados da sua empresa;</li>
+              <li>Processos, relatórios e dashboards pré-configurados;</li>
+              <li>Experiências guiadas para representantes, líderes e gestores de vendas;</li>
+              <li>Guias e outros materiais sobre boas práticas de vendas;</li>
+            </ul>
+          </div>
           <ul className="botoes">
-            <NavItems id="saiba-mais" link="http://salesforce.com" text="Saiba Mais" />
-            <NavItems id="teste-gratis-section" link="http://salesforce.com" text="Teste Grátis" />
+            <NavItems id="parceiros" link="parceiros" text="Parceiros" />
+            <NavItems id="nossa-campanha" link="nossa-campanha" text="Nossa Campanha" />
           </ul>
         </div>
 
       </div>
       <div className="form">
-        <h3>Preencha com os seus dados</h3>
+        <h3>Preencha com os seus dados pessoais</h3>
         <FormInput className="input-field" placeholder="Nome" value={form.nome} onChange={
           (event: any) => {
             changeState('nome', event.target.value);
@@ -146,39 +143,36 @@ export default function Cadastro() {
             changeState('telefone', event.target.value);
           }} />
 
-        <FormInput className="input-field" placeholder="Descrição" value={form.descricao} onChange={
-          (event: any) => {
-            changeState('descricao', event.target.value);
-          }} />
-
+        <h3>Preencha os seus dados da denúncia</h3>
 
         <FormInput className="input-field" placeholder="Tipo de Incidente ex: derramamento de resíduos químicos" value={form.tipoIncidente} onChange={
           (event: any) => {
             changeState('tipoIncidente', event.target.value);
           }} />
 
-
         <FormInput className="input-field" placeholder="Origem do resíduo" value={form.origemResiduo} onChange={
           (event: any) => {
             changeState('origemResiduo', event.target.value);
           }} />
-
-
 
         <FormInput className="input-field" placeholder="Recorrência do Problema" value={form.recorrenciaProblema} onChange={
           (event: any) => {
             changeState('recorrenciaProblema', event.target.value);
           }} />
 
+        <FormInput className="input-field" id="caixa-comentarios" placeholder="Descrição" value={form.descricao} onChange={
+          (event: any) => {
+            changeState('descricao', event.target.value);
+          }} />
 
-        <FormInput className="input-field" placeholder="Comentários Adicionais" value={form.comentariosAdicionais} onChange={
+        <FormInput className="input-field" id="caixa-comentarios" placeholder="Comentários Adicionais" value={form.comentariosAdicionais} onChange={
           (event: any) => {
             changeState('comentariosAdicionais', event.target.value);
           }} />
 
-        <button onClick={handleGeolocation}>Get Location</button>
+        {/* <button onClick={handleGeolocation}>Get Location</button> */}
 
-        <Button type="button" className="submit-button" text="Login" onClick={sendForm} />
+        <Button type="button" className="submit-button" text="Enviar" onClick={sendForm} />
 
       </div>
 

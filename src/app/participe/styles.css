@@ -5,9 +5,18 @@
     justify-content: space-between;
     flex-wrap: wrap-reverse;
     gap: 3rem;
-    
+    background-image: url(/vida-nos-pontos-mais-profundos-dos-oceanos.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;    
 }
+.pagina-cadastro li{
+    text-shadow: #00000087;
+}
+.pagina-cadastro p{
 
+}
 .pagina-cadastro > div:first-child{
     width: 45%;
     color: var(--text-light);
@@ -20,56 +29,66 @@
 .pagina-cadastro > div > img{
     max-width: 12rem;
 }
-.pagina-cadastro > :first-child > div p{
+.pagina-cadastro > div:first-child > div p{
+    margin-top: 3rem;
     font-size: 18px;
     margin-bottom: 1rem;
 }
+.pagina-cadastro > div:first-child .bg-b{
+    background-color: #00000087;
+}
 
-.pagina-cadastro > :first-child > div ul li {
+.pagina-cadastro > div:first-child > div ul li {
     list-style: disc;
     margin-left: 17px;
     line-height: 26px;
 }
-.pagina-cadastro > :first-child > div > .botoes{
+.pagina-cadastro > div:first-child > div > .botoes{
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     margin-top: 2rem;
     flex-wrap: wrap;
 }
 
-.pagina-cadastro > :first-child  > h2{
+.pagina-cadastro > div:first-child  > h2{
     font-weight: bold;
     color: var(--text-light);
     font-size: 35px;
     line-height: 55px;
     max-width: 50rem;
-    margin: 3rem 0;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
-.pagina-cadastro  > :first-child div > #saiba-mais, 
-.pagina-cadastro  > :first-child div > #teste-gratis-section,
+.pagina-cadastro  > :first-child div > ul #parceiros, 
+.pagina-cadastro  > :first-child div > ul #nossa-campanha,
 .pagina-cadastro .form .input-field > input,
 .pagina-cadastro .form .submit-button
 {
     box-shadow: 0 0 0 1px var(--text-light);
-    border-radius: 3rem;
+    border-radius: 5px;
     padding: 10px 20px;
     border-style: none;
+    list-style: none;
+    margin: 0;
 }
 
-.pagina-cadastro  > :first-child > div #saiba-mais a{
+.pagina-cadastro .form #caixa-comentarios > input{
+    height: 10rem;
+}
+
+.pagina-cadastro  > :first-child > div #parceiros a{
     color: var(--text-light);
     font-weight: 500;
 }
 
-.pagina-cadastro  > :first-child > div #teste-gratis-section a{
+.pagina-cadastro  > :first-child > div #nossa-campanha a{
     font-weight: 500;
 
     color: var(--action-color);
 }
 
-.pagina-cadastro  > :first-child > div #teste-gratis-section{
+.pagina-cadastro  > :first-child > div #nossa-campanha{
     background-color: var(--text-light);
 }
 
@@ -114,5 +133,23 @@
         gap: 7rem;
         justify-content: center;
         padding: 7rem 0;
+    }
+    .pagina-cadastro > div:first-child > div > .botoes {
+        justify-content: center;
+    }
+}
+@media (max-width: 900px) {
+    .pagina-cadastro .form{
+        width: 80%;
+    }
+}
+
+@media (max-width: 490px) {
+    .pagina-cadastro .form{
+        width: 90%;
+    }
+
+    .pagina-cadastro > div:first-child > div p {
+        text-align: center;
     }
 }

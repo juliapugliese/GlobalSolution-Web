@@ -3,7 +3,7 @@ import "./styles.css"
 
 const FormInput = (props: Props) => {
     return(
-        <div className={props.className}>
+        <div className={props.className} id={props.id}>
             {/* <label htmlFor="">{props.label}</label> */}
             <input type="text" placeholder={props.placeholder} value={props.value} onChange={props.onChange}/>
         </div>

@@ -3,5 +3,6 @@ export interface Props{
     value: string;
     onChange: any;
     className?: string;
+    id?: string;
     placeholder?: string;
 }
