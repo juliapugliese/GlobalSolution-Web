@@ -8,7 +8,7 @@
     
 }
 
-.pagina-cadastro >:first-child{
+.pagina-cadastro > div:first-child{
     width: 45%;
     color: var(--text-light);
     display: flex;
@@ -107,6 +107,9 @@
 }
 
 @media (max-width: 1200px) {
+    .pagina-cadastro > div:first-child , .pagina-cadastro .form {
+        width: 70%;
+    }
     .pagina-cadastro{
         gap: 7rem;
         justify-content: center;
