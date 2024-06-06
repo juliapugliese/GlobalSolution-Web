@@ -62,7 +62,7 @@ export default function Cadastro() {
     event.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/denunciante', {
+      const response = await fetch('http://localhost:8080/denunciantes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
