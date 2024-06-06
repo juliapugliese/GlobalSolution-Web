@@ -1,0 +1,12 @@
+#map{
+   z-index: 0;
+}
+
+.leaflet-popup{
+   display: none;
+}
+
+
+.leaflet-shadow-pane {
+   display: none;
+}

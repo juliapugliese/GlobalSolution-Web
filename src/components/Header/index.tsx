@@ -12,7 +12,7 @@ export function Header() {
                 <ul className="ul2">
                     <NavItems link="" text="+55 (11) 98170-0028 "/>                      
                     <NavItems id="icone-busca" link="" img={<img className="logo-barra-pesquisa" src="search-icon2.svg" alt="icone de lupa"/>}/>
-                    <NavItems id="login" link="login" text="Login"/>
+                    <NavItems link="participe" text="Participe"/>
                 </ul>
             </div>
             <nav className={`nav ${isNavActive ? 'active' : ''}`}>

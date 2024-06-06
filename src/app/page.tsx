@@ -3,7 +3,6 @@ import styles from "./page.module.css";
 import { Section1 } from "@/components/Section1";
 import { Section2 } from "@/components/Section2";
 import { Proposal } from "@/components/Proposal";
-import UploadPage from "@/components/ImageForm";
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       <Section1/>
       <Section2/>
       <Proposal/>
-      <UploadPage/>
 
     </main>
   );
