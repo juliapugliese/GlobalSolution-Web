@@ -1,0 +1,134 @@
+.form-page{
+    display: flex;
+    flex-direction: row;
+    padding: 6rem 5rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 7rem;
+    background-color: var(--text-light);
+    color: var(--bg-primary);
+ 
+}
+ 
+ 
+.form-page > .parceiros{
+    max-width: 38rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+ 
+}
+.form-page > .parceiros > img{
+    max-width: 24rem;
+}
+.form-page > .parceiros > h2{
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 75px;
+    margin-bottom: 1rem;
+}
+ 
+.form-page > .parceiros > h3{
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 1rem;
+}
+.form-page > .parceiros > p{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+ 
+.form-page > .parceiros > .butons-participe{
+    display: flex;
+    grid-gap: 3rem;
+}
+ 
+.form-page > .parceiros > .butons-participe li {
+    box-shadow: 0 0 0 1px var(--bg-primary);
+}
+ 
+.form-page .form .input-field > input,
+.form-page > .parceiros > .butons-participe li,
+.form-page .form .submit-button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    border-style: none;
+    list-style: none;
+    margin: 0;
+}
+ 
+.form-page > .parceiros #saiba-mais a{
+    color: var(--bg-primary);
+    font-weight: 500;
+}
+ 
+.form-page > .parceiros #participe-section{
+    background-color: var(--text-light);
+}
+.form-page > .parceiros #participe-section a{
+    color: var(--action-color);
+    font-weight: 500;
+}
+ 
+.form-page > :first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    text-align: center;
+}
+ 
+.form-page .form{
+    background-image: url(/vida-nos-pontos-mais-profundos-dos-oceanos.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 3rem 2rem 8rem;
+    border-radius: 1rem;
+    position: sticky;
+    top: 13rem;
+    height: fit-content;
+}
+.form-page .form h1{
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 44px;
+    margin-bottom: 1rem;
+    text-align: center;
+    max-width: 20rem;
+    text-transform: uppercase;
+}
+ 
+.form-page .form .input-field > input{
+    min-width: 14rem;
+    font-family: inherit;
+ 
+}
+ 
+.form-page .form .submit-button {
+    border-style: none;
+    background-color: var(--text-light);
+    color: var(--bg-primary);
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: center;
+}
+ 
+.form-page .imagens-parceiros {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.form-page .imagens-parceiros img{
+    max-width: 12rem;
+}
