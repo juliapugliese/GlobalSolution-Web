@@ -68,6 +68,7 @@
 
     .campanha-component .campanha-aba-campanha{
         padding: 5rem 7rem;
+        text-align: center;
     }
 }
 @media (max-width: 570px) {

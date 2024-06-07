@@ -1,5 +1,6 @@
 "use client";
 import "./styles.css";
+import { Footer } from "@/components/Footer";
 import MapComponentGot from "@/components/MapGot";
 
 import { useState, useEffect } from "react";
@@ -180,7 +181,7 @@ export default function FetchPage() {
 
         </div>
       </div>
-      
+      <Footer/>
     </div>
   );
 }

@@ -1,31 +1,32 @@
 .proposal {
     display: flex;
     flex-direction: row;
+    
 }
 
-.proposal >div {
-
-        position: relative;
-        flex: 1; /* As imagens ocuparão a mesma largura */
-
+.proposal>div {
+    position: relative;
+    flex: 1;
 }
-.proposal img{
+
+.proposal img {
     object-fit: cover;
     height: 60rem;
-    display: block; /* Torna a imagem um bloco para permitir sobreposição de texto */
-    width: 100%;
+    display: block;
+    width: 50vw;
 }
 
-.proposal > div>div{
+.proposal>div>div {
     position: absolute;
-    bottom: 10px; /* Distância do texto até a parte inferior */
-    left: 10px; /* Distância do texto até a esquerda */
-    color: white; /* Cor do texto */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
+
 @media screen and (max-width: 1560px) {
-    .proposal .social-media{
+    .proposal .social-media {
         width: 70%;
         grid-gap: 3.5rem;
     }
