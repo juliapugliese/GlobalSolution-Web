@@ -37,27 +37,35 @@ export function Proposal() {
 
   return (
     <section className="proposal">
-      <img className="logo-barra-pesquisa" src="pexels-francesco-ungaro-3172277.jpg" alt="icone de lupa" />
-      <img className="logo-barra-pesquisa" src="pexels-peterorpete-66218.jpg" alt="icone de lupa" />
-
-
-      {data.slice(0, 2).map((item: Item) => {
-        return (
-          <div key={item.id}>
-            <img className="logo-barra-pesquisa" src="pexels-francesco-ungaro-3172277.jpg" alt="icone de lupa" />
-            <div>
-              <h2>{item.data}</h2>
-              <h2>{item.tipoIncidente}</h2>
-              <p>{item.descricao}</p>
-            </div>
-          </div>
-        );
-      })}
+      <div className="image-proposal">
+        <img src="pexels-francesco-ungaro-3172277.jpg" alt="icone de lupa" />
+        <img src="pexels-peterorpete-66218.jpg" alt="icone de lupa" />
+      </div>
 
 
 
-      {/* <div>
-        <img className="logo-barra-pesquisa" src="pexels-francesco-ungaro-3172277.jpg" alt="icone de lupa" />
+      <div className="text-control">
+
+
+        {
+          data.slice(0, 2).map((item: Item) => {
+            return (
+              <div key={item.id} >
+
+                <h2>{item.data}</h2>
+                <h2>{item.tipoIncidente}</h2>
+                <p>{item.descricao}</p>
+
+              </div>
+            );
+          })
+        }
+        <div>
+          <h2>20-12-23</h2>
+          <h2>Derramaneto Petroleo</h2>
+          <p>Visto perto da area costeira</p>
+        </div>
+
         <div>
           <h2>20-12-23</h2>
           <h2>Derramaneto Petroleo</h2>
@@ -65,14 +73,6 @@ export function Proposal() {
         </div>
       </div>
 
-      <div>
-        <img className="logo-barra-pesquisa" src="pexels-peterorpete-66218.jpg" alt="icone de lupa" />
-        <div>
-          <h2>20-12-23</h2>
-          <h2>Derramaneto Petroleo</h2>
-          <p>Visto perto da area costeira</p>
-        </div>
-      </div> */}
 
 
     </section>

@@ -19,21 +19,21 @@ interface Item {
 export default function FetchPage() {
   const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:8080/denuncias", {
-  //     method: "GET",
-  //   })
-  //     .then((response) => {
-  //       const json = response.json();
-  //       return json;
-  //     })
-  //     .then((data) => {
-  //       setData(data);
-  //     })
-  //     .catch((error) => {
-  //       console.log("ERROR", error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:8080/denuncias", {
+      method: "GET",
+    })
+      .then((response) => {
+        const json = response.json();
+        return json;
+      })
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        console.log("ERROR", error);
+      });
+  }, []);
 
   return (
     <div className="dados-denuncia">
@@ -110,9 +110,7 @@ export default function FetchPage() {
             <li>
               <img src="padroes.svg" alt="ícone referente ao tema padrões" /><br />
               <b>Identificação de Padrões:</b><br /> Ajuda na identificação de padrões de poluição, possibilitando ações preventivas e políticas públicas mais eficazes.</li>
-            {/* <li>
-            <img src="planejamento.svg" alt="ícone referente ao tema planejamento" /><br />
-            <b>Ferramenta de Planejamento:</b><br /> As informações coletadas podem ser usadas por autoridades e ONGs para planejar e executar ações de limpeza e mitigação.</li> */}
+            
             <li>
               <img src="responsabilidade.svg" alt="ícone referente ao tema responsabilização" /><br />
               <b>Transparência e Responsabilização:</b><br /> Aumenta a transparência e a responsabilização de empresas e indivíduos que causam poluição, incentivando práticas mais sustentáveis.</li>

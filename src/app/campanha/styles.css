@@ -14,11 +14,13 @@
 }
 
 .dados-denuncia .problema-aba-campanha {
-    background: linear-gradient(rgb(15 10 82 / 26%), rgb(12 40 80 / 80%)), url(/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg);
-    /* background-image: url(/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg); */
+    background: linear-gradient(rgb(111 229 243 / 35%), rgb(0 0 0 / 36%)), 
+    url(/pexels-mrwandart-2827735.jpg);
+
+    /* background-image: url(/pexels-mrwandart-2827735.jpg); */
     background-size: cover;
     background-attachment: fixed;
-    background-position-y: -4rem;
+    background-position-y: -15rem;
     background-repeat: no-repeat;
     padding: 2.9rem 10rem 6rem 10rem;
     color: var(--nav-bar-text-color);
@@ -40,6 +42,7 @@
     font-size: 16.23px;
     line-height: 29px;
     text-align: center;
+    text-shadow: 1px 1px 34px #000000;
     /* max-width: 80%; */
 }
 
