@@ -1,21 +1,25 @@
 "use client";
+import "./styles.css";
 import MapComponentGot from "@/components/MapGot";
 
 import { useState, useEffect } from "react";
 
 interface Item {
-  userId: number;
   id: number;
-  title: string;
-  body: string;
-  endereco: string;
+  comentariosAdicionais: string;
+  data: string;
+  descricao: string;
+  localizacao: string;
+  origemResiduo: string;
+  recorrenciaProblema: string;
+  tipoIncidente: string;
 }
 
 export default function FetchPage() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("url-java", {
+    fetch("http://localhost:8080/denuncias", {
       method: "GET",
     })
       .then((response) => {
@@ -31,21 +35,22 @@ export default function FetchPage() {
   }, []);
 
   return (
-    <div>
+    <div className="dados-denuncia">
       <h1>Fetch Page</h1>
       <br />
       <h2>Lista de itens</h2>
 
       {data.map((item: Item) => {
         
-        const [latitude, longitude, ...address] = item.endereco.split(', ')
+        const [latitude, longitude, ...address] = item.localizacao.split(', ')
+        const uniqueMapId = `map-${item.id}`;
 
         return (
           <div key={item.id} className="">
-            <MapComponentGot latitude={parseFloat(latitude)} longitude={parseFloat(longitude)}/>
-            <h1>{item.id}</h1>
-            <h3>{item.title}</h3>
-            <p>{item.body}</p>
+            <MapComponentGot mapId={uniqueMapId} latitude={parseFloat(latitude)} longitude={parseFloat(longitude)}/>
+            <h2>{item.data}</h2>
+            <h2>{item.tipoIncidente}</h2>
+            <p>{item.descricao}</p>
           </div>
         );
       })}

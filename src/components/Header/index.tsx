@@ -23,7 +23,7 @@ export function Header() {
                     <ul className="ul1">
                         <NavItems link="" text="Nossa Campanha"/>
                         <NavItems link="" text="O Nosso Propósito"/>
-                        <NavItems link="" text="Parceiros"/>
+                        <NavItems link="parceiros" text="Parceiros"/>
                         <NavItems link="devteam" text="Suporte"/>
                         <NavItems link="participe" text="Participe"/>
                     </ul>

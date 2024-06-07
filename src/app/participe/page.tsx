@@ -67,20 +67,25 @@ export default function Cadastro() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          "email": form.email,
-          "nome": form.nome,
-          "denuncia": {
-            "descricao": form.descricao,
-            "data": Date.now(),
-            "localizacao": localizacao? `${localizacao.latitude},${localizacao.longitude}` : null,
-            "tipoIncidente": form.tipoIncidente,
-            "origemResiduo": form.origemResiduo,
-            "recorrenciaProblema": form.recorrenciaProblema,
-            "comentariosAdicionais": form.comentariosAdicionais
-          },
-          "telefone": form.telefone
-        })
+        body: JSON.stringify(
+          {
+            "denuncias": [
+              {
+                "comentariosAdicionais": form.comentariosAdicionais,
+                "data": new Date(),
+                "descricao": form.descricao,
+                "localizacao": localizacao ? `${localizacao.latitude},${localizacao.longitude}` : null,
+                "origemResiduo": form.origemResiduo,
+                "recorrenciaProblema": form.recorrenciaProblema,
+                "tipoIncidente": form.tipoIncidente
+              }
+            ],
+            "email": form.email,
+            "nome": form.nome,
+            "telefone": form.telefone
+          }
+
+        )
       });
 
       if (!response.ok) {

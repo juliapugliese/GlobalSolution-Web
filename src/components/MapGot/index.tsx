@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './styles.css';
@@ -6,25 +6,38 @@ import './styles.css';
 interface Props {
   latitude: number;
   longitude: number;
+  mapId: string;
 }
 
-const MapComponentGot: React.FC<Props> = ({ latitude, longitude }) => {
+const MapComponentGot: React.FC<Props> = ({ latitude, longitude, mapId }) => {
   useEffect(() => {
-    const map = L.map('map').setView([latitude, longitude], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
-    L.marker([latitude, longitude]).addTo(map)
-      .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-      .openPopup();
-    
+    let map: L.Map | null = L.map(mapId).setView([latitude, longitude], 13); // Inicializa com um mapa vazio
+
+    if (!map) {
+      map = L.map(mapId).setView([latitude, longitude], 13);
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+      L.marker([latitude, longitude]).addTo(map)
+     .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+     .openPopup();
+
+      return () => {
+        if (map) {
+          map.remove(); 
+        }
+      };
+    }
+
     return () => {
-      map.remove();
+      if (map) {
+        map.remove(); 
+      }
     };
-  }, [latitude, longitude]);
+  }, [latitude, longitude, mapId]);
 
   return (
-    <div id="map" style={{ height: "400px", width: "100%" }}></div>
+    <div id={mapId} style={{ height: "400px", width: "100%" }}></div>
   );
 };
 
