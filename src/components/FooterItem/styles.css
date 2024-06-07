@@ -23,6 +23,6 @@
 .paragrafo-footer a {
     font-size: 12px;
     text-decoration: none;
-    color: var(--action-color);
+    color: var(--text-light);
 
 }

@@ -180,11 +180,7 @@ export default function FetchPage() {
 
         </div>
       </div>
-
-
-
-
-
+      
     </div>
   );
 }

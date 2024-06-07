@@ -1,0 +1,78 @@
+.campanha-component {
+    display: flex;
+}
+
+.campanha-component > img{
+    width: 20%;
+    object-fit: cover;
+
+    
+}
+
+.campanha-component .campanha-aba-campanha {
+    padding: 5rem 10rem;
+    color: var(--text-light);
+}
+
+.campanha-component .campanha-aba-campanha>p{
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    
+}
+
+.campanha-component .campanha-aba-campanha h1 {
+    margin-bottom: 6px;
+    font-size: 35px;
+    font-family: system-ui;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 400;
+}
+.campanha-component .campanha-aba-campanha>h3 {
+    font-size: 25px;
+    font-family: system-ui;
+    line-height: 60px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.campanha-component .campanha-aba-campanha>ul {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 15px;
+}
+.campanha-component .campanha-aba-campanha>ul li {
+    list-style: decimal;
+    margin-bottom: 15px;
+}
+
+
+.campanha-component .campanha-aba-campanha>ul li img {
+    width: 6rem;
+    height: 6rem;
+    vertical-align: top;
+    margin-bottom: 1rem;
+
+}
+
+@media (max-width: 915px) {
+
+    .campanha-component .campanha-aba-campanha>ul {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .campanha-component .campanha-aba-campanha{
+        padding: 5rem 7rem;
+    }
+}
+@media (max-width: 570px) {
+    .campanha-component .campanha-aba-campanha>h3 {
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+}

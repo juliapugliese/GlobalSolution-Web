@@ -9,7 +9,7 @@ export function Footer() {
 
       
       <div className="conteudo-ilustrativo-footer">
-        <img className="logo-footer" src="Salesforce-Logo.png" alt="logo salesforce"/>
+        <img className="logo-footer" src="logo-footer.svg" alt="logo salesforce"/>
 
         <div>
           <div className="copyright">
