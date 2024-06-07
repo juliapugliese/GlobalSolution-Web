@@ -84,40 +84,57 @@ export default function FetchPage() {
 
       <div className="solucao-aba-campanha">
         <h1>A Solução</h1>
-        <p>
+        <p id="solucao-p">
           Criação da plataforma digital dedicada à coleta, organização e divulgação de informações sobre locais afetados pela poluição no mar. Este portal
           permite que cidadãos e organizações enviem denúncias de focos de poluição, incluindo a localização geográfica e fotos do local afetado.
         </p>
         <h3>Vantagens</h3>
-        <ul>
-          <li>
-          <img src="plant.svg" alt="ícone referente a biodiversidade" /><br />
-
-            <b>Engajamento Comunitário:</b><br /> Incentiva a participação cidadã e a responsabilidade ambiental, aumentando a conscientização sobre os problemas de poluição marinha.</li>
-          <li>
-            <b>Dados em Tempo Real:</b><br /> Proporciona dados em tempo real sobre a extensão e a localização da poluição, facilitando respostas rápidas e eficientes.</li>
-          <li>
-            <b>Identificação de Padrões:</b><br /> Ajuda na identificação de padrões de poluição, possibilitando ações preventivas e políticas públicas mais eficazes.</li>
-          <li><b>Ferramenta de Planejamento:</b><br /> As informações coletadas podem ser usadas por autoridades e ONGs para planejar e executar ações de limpeza e mitigação.</li>
-          <li><b>Transparência e Responsabilização:</b><br /> Aumenta a transparência e a responsabilização de empresas e indivíduos que causam poluição, incentivando práticas mais sustentáveis.</li>
-          <li><b>Preservação dos Ecossistemas:</b><br /> Contribui para a proteção dos ecossistemas marinhos, que são cruciais para a biodiversidade e o equilíbrio ambiental.</li>
-          <li><b>Saúde Pública:</b><br /> Reduz os riscos à saúde pública associados à poluição local e marinha, como contaminação de alimentos e águas recreativas.</li>
-        </ul>
         <p>
           Um portal inovador para denúncias de focos de poluição marinha não apenas empodera cidadãos a contribuírem para a proteção ambiental,
           mas também fornece dados valiosos que podem orientar políticas públicas e ações de preservação. Ao combinar tecnologia, engajamento
           comunitário e colaboração entre diversos atores, é possível criar um impacto positivo significativo na luta contra a poluição marinha.
         </p>
-        <h2>Lista de itens</h2>
+        <ul>
+          <li>
+            <img src="comunidade.svg" alt="ícone referente ao tema engajamento comunitário" /><br />
+            <b>Engajamento Comunitário:</b><br /> Incentiva a participação cidadã e a responsabilidade ambiental, aumentando a conscientização sobre os problemas de poluição marinha.</li>
+          <li>
+            <img src="dados.svg" alt="ícone referente ao tema dados" /><br />
+            <b>Dados em Tempo Real:</b><br /> Proporciona dados em tempo real sobre a extensão e a localização da poluição, facilitando respostas rápidas e eficientes.</li>
+          <li>
+            <img src="padroes.svg" alt="ícone referente ao tema padrões" /><br />
+            <b>Identificação de Padrões:</b><br /> Ajuda na identificação de padrões de poluição, possibilitando ações preventivas e políticas públicas mais eficazes.</li>
+          {/* <li>
+            <img src="planejamento.svg" alt="ícone referente ao tema planejamento" /><br />
+            <b>Ferramenta de Planejamento:</b><br /> As informações coletadas podem ser usadas por autoridades e ONGs para planejar e executar ações de limpeza e mitigação.</li> */}
+          <li>
+            <img src="responsabilidade.svg" alt="ícone referente ao tema responsabilização" /><br />
+            <b>Transparência e Responsabilização:</b><br /> Aumenta a transparência e a responsabilização de empresas e indivíduos que causam poluição, incentivando práticas mais sustentáveis.</li>
+          <li>
+            <img src="eco.svg" alt="ícone referente ao tema ecossistemas" /><br />
+            <b>Preservação dos Ecossistemas:</b><br /> Contribui para a proteção dos ecossistemas marinhos, que são cruciais para a biodiversidade e o equilíbrio ambiental.</li>
+          <li>
+            <img src="saudeseguranca.svg" alt="ícone referente ao tema saúde pública" /><br />
+            <b>Saúde Pública:</b><br /> Reduz os riscos à saúde pública associados à poluição local e marinha, como contaminação de alimentos e águas recreativas.</li>
+        </ul>
 
+        <h1 id="nosso-projeto">Nosso Projeto</h1>
+        <div className="nosso-projeto">
+          <div>
+            <img src="naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Logo da BlueFuture" />
+            <h2>20-12-23</h2>
+            <h2>Derramaneto Petroleo</h2>
+            <p>Visto perto da area costeira</p>
+          </div>
 
-        {/* teste layout */}
-        <div className="">
-          <img src="naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Logo da BlueFuture" />
-          <h2>20-12-23</h2>
-          <h2>Derramaneto Petroleo</h2>
-          <p>Visto perto da area costeira</p>
+          <div>
+            <img src="naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Logo da BlueFuture" />
+            <h2>20-12-23</h2>
+            <h2>Derramaneto Petroleo</h2>
+            <p>Visto perto da area costeira</p>
+          </div>
         </div>
+
       </div>
 
 
@@ -129,7 +146,7 @@ export default function FetchPage() {
         const uniqueMapId = `map-${item.id}`;
 
         return (
-          <div key={item.id} className="">
+          <div key={item.id}>
             <MapComponentGot mapId={uniqueMapId} latitude={parseFloat(latitude)} longitude={parseFloat(longitude)} />
             <h2>{item.data}</h2>
             <h2>{item.tipoIncidente}</h2>
