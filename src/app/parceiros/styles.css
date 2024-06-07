@@ -1,3 +1,122 @@
-.dados-denuncia{
-    background-color: aliceblue;
+.login-page{
+    /* background-image: url("/background-login-nuvem.svg"); 
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed; */
+
+    display: flex;
+    flex-direction: row;
+    padding: 6rem 5rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 7rem;
+}
+.login-page img{
+    max-width: 12rem;
+}
+
+.login-page > :nth-child(2){
+    max-width: 35rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-page > :nth-child(2) > h2{
+    font-weight: bold;
+    color: var(--text-light);
+    font-size: 42px;
+    line-height: 75px;
+    margin-bottom: 3rem;
+}
+.login-page > :nth-child(2) > p{
+    color: var(--text-light);
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.login-page > :nth-child(2) > :nth-child(3){
+    display: flex;
+    grid-gap: 3rem;
+}
+
+.login-page > :nth-child(2) > :nth-child(3) li, .login-page .form .input-field > input, .login-page .form .submit-button, .complementos > div #teste-gratis-section {
+    box-shadow: 0 0 0 1px var(--text-light);
+    border-radius: 3rem;
+    padding: 10px 20px;
+    border-style: none;
+
+}
+
+.login-page > :nth-child(2) #saiba-mais a, .complementos > div #teste-gratis-section a{
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.login-page > :nth-child(2) #teste-gratis-section{
+    background-color: var(--text-light);
+}
+.login-page > :nth-child(2) #teste-gratis-section a{
+    color: var(--action-color);
+    font-weight: 500;
+}
+
+.login-page > :first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    text-align: center;
+}
+
+.login-page .form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login-page .form h3{
+    color: var(--text-light);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login-page .form .input-field > input{
+    min-width: 14rem;
+    font-family: inherit;
+
+}
+
+.login-page .form .submit-button{
+    border-style: none;
+    background-color: transparent;
+    color: var(--text-light);
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login-page .complementos div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.login-page .complementos{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.login-page .complementos div p{
+    max-width: fit-content;
+    color: var(--text-light);
+}
+.login-page .complementos div label{
+    color: var(--text-light);
 }

@@ -1,92 +1,143 @@
-'use client'
+"use client";
 import "./styles.css";
-import React, { useState } from 'react';
-import NavItems from "@/components/NavItems";
-import Button from "@/components/Button";
-import FormInput from "@/components/FormInput";
-const Page = () => {
+import MapComponentGot from "@/components/MapGot";
 
-  const [form, setForm] = useState({
-      username: "",
-      password: ""
-  });
+import { useState, useEffect } from "react";
 
-  const sendForm = (event: any) => {
-    fetch('http://localhost:8080/cliente', {
-        method: 'post',
-        body:  JSON.stringify({ 
-          "nomeUsuario": form.username,
-          "senha": form.password
-        })
-        
-    })
-  };
+interface Item {
+  id: number;
+  comentariosAdicionais: string;
+  data: string;
+  descricao: string;
+  localizacao: string;
+  origemResiduo: string;
+  recorrenciaProblema: string;
+  tipoIncidente: string;
+}
 
-  const changeState = (type: string, value: string) => {
-    setForm({
-        ...form,
-        [type]: value
-    })
-  }
+export default function FetchPage() {
+  const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:8080/denuncias", {
+  //     method: "GET",
+  //   })
+  //     .then((response) => {
+  //       const json = response.json();
+  //       return json;
+  //     })
+  //     .then((data) => {
+  //       setData(data);
+  //     })
+  //     .catch((error) => {
+  //       console.log("ERROR", error);
+  //     });
+  // }, []);
 
   return (
-    <div className="login-page">
-      <div>
-        <img src="salesforce-logo.png" alt="Logo da SalesForce"/>
-
-        <div className="form">
-          <h3>Nome de usuáro</h3>
-
-          <FormInput className="input-field" placeholder="Nome de Usuário" value={form.username} onChange={
-              (event: any) => {
-              changeState('username', event.target.value);
-          } }/>
-
-          <h3>Senha</h3>
-
-          <FormInput className="input-field" placeholder="Senha" value={form.password} onChange={
-              (event: any) => {
-              changeState('password', event.target.value);
-          } }/>
-
-          <Button type="submit" className="submit-button" text="Login" onClick={sendForm}/>
-
-        </div>
-        
-
-        <div className="complementos">
-          <div>
-            <div>
-              <input type="checkbox" id="Lembre-me" name="Lembre-me" />
-              <label form="Lembre-me">Lembrar-me</label>
-            </div>
-
-          </div>
-          <div>
-            <p>Esqueceu sua senha?</p>
-            <p>Usar domínio personalizado</p>
-          </div>
-          <div>
-            <p>Não é um cliente?</p>
-            <NavItems id="teste-gratis-section" link="http://salesforce.com" text="Teste Grátis"/>
-          </div>
-          
-        </div>
-
-
-
+    <div className="dados-denuncia">
+      <div className="problema-aba-campanha">
+        <h1>O Problema</h1>
+        <p>
+          Fundamentais para a biodiversidade do planeta, os oceanos
+          enfrentam enormes desafios como as ameças aos ecossistemas
+          marinhos, poluição, mudanças climáticas, entre outros, causando
+          impacto direto na economia global. À medida que esses
+          problemas ambientais aumentam, o mundo precisa cada
+          vez mais de nós. Esses problemas afetam não apenas os ecossistemas
+          marinhos, mas também têm impacto direto na economia global.
+        </p>
       </div>
-      
-      <div>
-        <h2>Entregue sucesso agora com o Salesforce Customer 360.</h2>
-        <p>O Customer 360 é a nossa suíte de produtos e serviços que ajuda 98% dos clientes a alcançar ou superar suas metas de ROI.</p>
-        <div>
-          <NavItems id="saiba-mais" link="http://salesforce.com" text="Saiba Mais"/>
-          <NavItems id="teste-gratis-section" link="http://salesforce.com" text="Teste Grátis"/>
-        </div>
-            
+      <div className="campanha-aba-campanha">
+        <h1>A campanha</h1>
+        <p>
+          A campanha <b>"Juntos Pelos Mares"</b> da Blue Future é uma iniciativa nacional focada na preservação e recuperação dos ecossistemas marinhos e das águas brasileiras.
+          Diferente de outras campanhas que se concentram apenas na poluição por plásticos, "Juntos Pelos Mares" aborda a questão de todos os tipos de resíduos que ameaçam nossos mares,
+          rios e costas.
+        </p>
+        <h3>Importância da campanha</h3>
+        <ul>
+          <li>
+            <img src="plant.svg" alt="ícone referente a biodiversidade" /><br />
+            <b>Proteção da Biodiversidade:</b> Ao combater a poluição de todas as formas, a campanha "Blue Future" ajuda a preservar a rica biodiversidade marinha
+            e fluvial do Brasil, garantindo a sobrevivência de inúmeras espécies.</li>
+          <li>
+            <img src="medical_services.svg" alt="ícone referente a serviços médicos" /><br />
+            <b>Saúde Pública:</b> Reduzindo a poluição das águas, contribuímos para a saúde pública, evitando a contaminação de alimentos e água potável.
+          </li>
+          <li>
+            <img src="savings.svg" alt="ícone referente a sustentabilidade econômica" /><br />
+            <b>Sustentabilidade Econômica:</b> A campanha promove uma economia mais sustentável, incentivando práticas empresariais e comunitárias que minimizam a geração de resíduos.
+          </li>
+          <li>
+            <img src="groups.svg" alt="ícone referente a responsabilidade social" /><br />
+            <b>Responsabilidade Social:</b> Envolvendo todos os setores da sociedade, "Blue Future" fortalece a responsabilidade social e o engajamento cívico,
+            criando uma cultura de cuidado e respeito pelo meio ambiente.
+          </li>
+        </ul>
+        <p>
+          "Juntos Pelos Mares" é uma campanha abrangente e inovadora que visa transformar a maneira como lidamos com os resíduos e a poluição das águas no Brasil.
+          Através de ações educativas, parcerias estratégicas e um sistema eficiente de denúncias, buscamos construir um futuro mais limpo e sustentável para nossos mares,
+          rios e comunidades. Junte-se a nós nessa missão e ajude a garantir um futuro azul para as próximas gerações.
+        </p>
       </div>
+
+      <div className="solucao-aba-campanha">
+        <h1>A Solução</h1>
+        <p>
+          Criação da plataforma digital dedicada à coleta, organização e divulgação de informações sobre locais afetados pela poluição no mar. Este portal
+          permite que cidadãos e organizações enviem denúncias de focos de poluição, incluindo a localização geográfica e fotos do local afetado.
+        </p>
+        <h3>Vantagens</h3>
+        <ul>
+          <li>
+          <img src="plant.svg" alt="ícone referente a biodiversidade" /><br />
+
+            <b>Engajamento Comunitário:</b><br /> Incentiva a participação cidadã e a responsabilidade ambiental, aumentando a conscientização sobre os problemas de poluição marinha.</li>
+          <li>
+            <b>Dados em Tempo Real:</b><br /> Proporciona dados em tempo real sobre a extensão e a localização da poluição, facilitando respostas rápidas e eficientes.</li>
+          <li>
+            <b>Identificação de Padrões:</b><br /> Ajuda na identificação de padrões de poluição, possibilitando ações preventivas e políticas públicas mais eficazes.</li>
+          <li><b>Ferramenta de Planejamento:</b><br /> As informações coletadas podem ser usadas por autoridades e ONGs para planejar e executar ações de limpeza e mitigação.</li>
+          <li><b>Transparência e Responsabilização:</b><br /> Aumenta a transparência e a responsabilização de empresas e indivíduos que causam poluição, incentivando práticas mais sustentáveis.</li>
+          <li><b>Preservação dos Ecossistemas:</b><br /> Contribui para a proteção dos ecossistemas marinhos, que são cruciais para a biodiversidade e o equilíbrio ambiental.</li>
+          <li><b>Saúde Pública:</b><br /> Reduz os riscos à saúde pública associados à poluição local e marinha, como contaminação de alimentos e águas recreativas.</li>
+        </ul>
+        <p>
+          Um portal inovador para denúncias de focos de poluição marinha não apenas empodera cidadãos a contribuírem para a proteção ambiental,
+          mas também fornece dados valiosos que podem orientar políticas públicas e ações de preservação. Ao combinar tecnologia, engajamento
+          comunitário e colaboração entre diversos atores, é possível criar um impacto positivo significativo na luta contra a poluição marinha.
+        </p>
+        <h2>Lista de itens</h2>
+
+
+        {/* teste layout */}
+        <div className="">
+          <img src="naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Logo da BlueFuture" />
+          <h2>20-12-23</h2>
+          <h2>Derramaneto Petroleo</h2>
+          <p>Visto perto da area costeira</p>
+        </div>
+      </div>
+
+
+
+
+      {data.map((item: Item) => {
+
+        const [latitude, longitude, ...address] = item.localizacao.split(', ')
+        const uniqueMapId = `map-${item.id}`;
+
+        return (
+          <div key={item.id} className="">
+            <MapComponentGot mapId={uniqueMapId} latitude={parseFloat(latitude)} longitude={parseFloat(longitude)} />
+            <h2>{item.data}</h2>
+            <h2>{item.tipoIncidente}</h2>
+            <p>{item.descricao}</p>
+          </div>
+        );
+      })}
     </div>
   );
-};
-export default Page;
+}
+

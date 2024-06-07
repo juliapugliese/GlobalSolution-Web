@@ -17,12 +17,12 @@ export function Header() {
             </div>
             <nav className={`nav ${isNavActive ? 'active' : ''}`}>
                 <div>
-                    <NavItems link="http://localhost:3000/" id="logo" img={<img src="logo.svg" alt="Logo da SalesForce"/>}/>
+                    <NavItems link="http://localhost:3000/" id="logo" img={<img src="logo.svg" alt="Logo da BlueFuture"/>}/>
                     <button className="hamburguer" onClick={() => setIsNavActive(!isNavActive)}></button>
 
                     <ul className="ul1">
-                        <NavItems link="" text="Nossa Campanha"/>
-                        <NavItems link="" text="O Nosso Propósito"/>
+                        <NavItems link="campanha" text="Nossa Campanha"/>
+                        <NavItems link="proposito" text="O Nosso Propósito"/>
                         <NavItems link="parceiros" text="Parceiros"/>
                         <NavItems link="devteam" text="Suporte"/>
                         <NavItems link="participe" text="Participe"/>

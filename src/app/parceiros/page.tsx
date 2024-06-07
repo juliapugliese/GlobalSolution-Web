@@ -1,60 +1,92 @@
-"use client";
+'use client'
 import "./styles.css";
-import MapComponentGot from "@/components/MapGot";
+import React, { useState } from 'react';
+import NavItems from "@/components/NavItems";
+import Button from "@/components/Button";
+import FormInput from "@/components/FormInput";
+const Page = () => {
 
-import { useState, useEffect } from "react";
+  const [form, setForm] = useState({
+      username: "",
+      password: ""
+  });
 
-interface Item {
-  id: number;
-  comentariosAdicionais: string;
-  data: string;
-  descricao: string;
-  localizacao: string;
-  origemResiduo: string;
-  recorrenciaProblema: string;
-  tipoIncidente: string;
-}
-
-export default function FetchPage() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:8080/denuncias", {
-      method: "GET",
+  const sendForm = (event: any) => {
+    fetch('http://localhost:8080/cliente', {
+        method: 'post',
+        body:  JSON.stringify({ 
+          "nomeUsuario": form.username,
+          "senha": form.password
+        })
+        
     })
-      .then((response) => {
-        const json = response.json();
-        return json;
-      })
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.log("ERROR", error);
-      });
-  }, []);
+  };
+
+  const changeState = (type: string, value: string) => {
+    setForm({
+        ...form,
+        [type]: value
+    })
+  }
 
   return (
-    <div className="dados-denuncia">
-      <h1>Fetch Page</h1>
-      <br />
-      <h2>Lista de itens</h2>
+    <div className="login-page">
+      <div>
+        <img src="salesforce-logo.png" alt="Logo da SalesForce"/>
 
-      {data.map((item: Item) => {
+        <div className="form">
+          <h3>Nome de usuáro</h3>
+
+          <FormInput className="input-field" placeholder="Nome de Usuário" value={form.username} onChange={
+              (event: any) => {
+              changeState('username', event.target.value);
+          } }/>
+
+          <h3>Senha</h3>
+
+          <FormInput className="input-field" placeholder="Senha" value={form.password} onChange={
+              (event: any) => {
+              changeState('password', event.target.value);
+          } }/>
+
+          <Button type="submit" className="submit-button" text="Login" onClick={sendForm}/>
+
+        </div>
         
-        const [latitude, longitude, ...address] = item.localizacao.split(', ')
-        const uniqueMapId = `map-${item.id}`;
 
-        return (
-          <div key={item.id} className="">
-            <MapComponentGot mapId={uniqueMapId} latitude={parseFloat(latitude)} longitude={parseFloat(longitude)}/>
-            <h2>{item.data}</h2>
-            <h2>{item.tipoIncidente}</h2>
-            <p>{item.descricao}</p>
+        <div className="complementos">
+          <div>
+            <div>
+              <input type="checkbox" id="Lembre-me" name="Lembre-me" />
+              <label form="Lembre-me">Lembrar-me</label>
+            </div>
+
           </div>
-        );
-      })}
+          <div>
+            <p>Esqueceu sua senha?</p>
+            <p>Usar domínio personalizado</p>
+          </div>
+          <div>
+            <p>Não é um cliente?</p>
+            <NavItems id="teste-gratis-section" link="http://salesforce.com" text="Teste Grátis"/>
+          </div>
+          
+        </div>
+
+
+
+      </div>
+      
+      <div>
+        <h2>Entregue sucesso agora com o Salesforce Customer 360.</h2>
+        <p>O Customer 360 é a nossa suíte de produtos e serviços que ajuda 98% dos clientes a alcançar ou superar suas metas de ROI.</p>
+        <div>
+          <NavItems id="saiba-mais" link="http://salesforce.com" text="Saiba Mais"/>
+          <NavItems id="teste-gratis-section" link="http://salesforce.com" text="Teste Grátis"/>
+        </div>
+            
+      </div>
     </div>
   );
-}
-
+};
+export default Page;
