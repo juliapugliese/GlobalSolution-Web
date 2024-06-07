@@ -1,14 +1,19 @@
-.dados-denuncia{
+.dados-denuncia {
     background-color: aliceblue;
 }
 
-.dados-denuncia .solucao-aba-campanha .nosso-projeto img {
+.dados-denuncia .nosso-projeto img {
+    height: 400px;
+    max-width: 30rem;
+    width: 100%;
+}
+.dados-denuncia .nosso-projeto .map-got{
     height: 400px;
     max-width: 30rem;
     width: 100%;
 }
 
-.dados-denuncia .problema-aba-campanha{
+.dados-denuncia .problema-aba-campanha {
     background: linear-gradient(rgb(15 10 82 / 26%), rgb(12 40 80 / 80%)), url(/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg);
     /* background-image: url(/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg); */
     background-size: cover;
@@ -21,7 +26,8 @@
     flex-direction: column;
     align-items: center;
 }
-.dados-denuncia h1{
+
+.dados-denuncia h1 {
     margin-bottom: 6px;
     font-size: 35px;
     font-family: system-ui;
@@ -30,83 +36,220 @@
     font-weight: 400;
 }
 
-.dados-denuncia .problema-aba-campanha > p{
+.dados-denuncia .problema-aba-campanha>p {
     font-size: 16.23px;
     line-height: 29px;
     text-align: center;
     /* max-width: 80%; */
 }
 
-.dados-denuncia .campanha-aba-campanha > p,
-.dados-denuncia .solucao-aba-campanha > p{
+.dados-denuncia .campanha-aba-campanha>p,
+.dados-denuncia .solucao-aba-campanha p {
     font-size: 14px;
     line-height: 22px;
     margin-top: 1rem;
     margin-bottom: 3rem;
 }
 
-.dados-denuncia .campanha-aba-campanha, .dados-denuncia .solucao-aba-campanha{
+.dados-denuncia .campanha-aba-campanha,
+.dados-denuncia .solucao-aba-campanha {
     padding: 5rem 10rem;
 }
 
-.dados-denuncia .solucao-aba-campanha{
+.dados-denuncia .nosso-projeto {
+    padding: 0 10rem 5rem;
+}
+
+.dados-denuncia .solucao-aba-campanha,
+.dados-denuncia .nosso-projeto {
     background-color: #3bc7da;
     color: var(--text-light);
 }
-.dados-denuncia .campanha-aba-campanha > h3,
-.dados-denuncia .solucao-aba-campanha > h3{
+
+.dados-denuncia .campanha-aba-campanha>h3,
+.dados-denuncia .solucao-aba-campanha h3 {
     font-size: 25px;
     font-family: system-ui;
     line-height: 60px;
     font-weight: 400;
     margin-top: 10px;
 }
-.dados-denuncia .campanha-aba-campanha > ul {
+
+.dados-denuncia .campanha-aba-campanha>ul {
     display: flex;
     gap: 1.5rem;
     margin-left: 15px;
 }
-.dados-denuncia .campanha-aba-campanha > ul li,
-.dados-denuncia .solucao-aba-campanha > ul li{
+
+.dados-denuncia .campanha-aba-campanha>ul li,
+.dados-denuncia .solucao-aba-campanha ul li {
     list-style: decimal;
     margin-bottom: 15px;
 }
-.dados-denuncia .campanha-aba-campanha > ul li img{
+
+.dados-denuncia .campanha-aba-campanha>ul li img {
     width: 6rem;
     height: 6rem;
     vertical-align: top;
     margin-bottom: 1rem;
 
 }
-.dados-denuncia .solucao-aba-campanha > ul li img{
+
+.dados-denuncia .solucao-aba-campanha>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.dados-denuncia .solucao-aba-campanha ul li img {
     width: 4rem;
     height: 4rem;
     margin-bottom: 1rem;
 
 }
-.dados-denuncia .solucao-aba-campanha > ul{
+
+.dados-denuncia .solucao-aba-campanha ul {
     display: flex;
     flex-direction: row;
-    gap: 1.2rem;
+    gap: 1.1rem;
     color: var(--action-color);
     flex-wrap: wrap;
+    justify-content: center;
 }
-.dados-denuncia .solucao-aba-campanha > ul li{
+
+.dados-denuncia .solucao-aba-campanha ul li {
     background-color: var(--text-light);
     padding: 1.7rem 1.9rem 4rem;
     width: 10rem;
     border-radius: 12px;
     margin-bottom: unset;
 }
-.dados-denuncia .solucao-aba-campanha #solucao-p{
+
+.dados-denuncia .solucao-aba-campanha #solucao-p {
     margin-bottom: unset;
 }
 
-.dados-denuncia .solucao-aba-campanha .nosso-projeto{
-    display: flex;
+.dados-denuncia .nosso-projeto>h1 {
+    margin-bottom: 2rem;
+
 }
 
-.dados-denuncia .solucao-aba-campanha #nosso-projeto{
-    margin: 4rem 0 2rem;
-    
+.dados-denuncia .nosso-projeto .denuncias-projeto {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.dados-denuncia .nosso-projeto .denuncias-projeto > div > div{
+    max-width: fit-content;
+}
+.dados-denuncia .nosso-projeto .denuncias-projeto > div > div h2{
+    font-size: 20px;
+    font-family: system-ui;
+    line-height: 30px;
+    font-weight: 600;
+
+}
+
+@media (max-width: 1520px) {
+    .dados-denuncia .solucao-aba-campanha ul {
+        justify-content: flex-end;
+        max-width: 55%;
+    }
+
+    .dados-denuncia .solucao-aba-campanha #solucao-p {
+        margin-top: unset;
+    }
+
+    .dados-denuncia .solucao-aba-campanha>div>div {
+        max-width: 40%;
+    }
+
+    .dados-denuncia .solucao-aba-campanha>div {
+        margin-top: 3rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 1490px) {
+    .dados-denuncia .solucao-aba-campanha ul {
+        max-width: none;
+    }
+
+}
+
+@media (max-width: 1450px) {
+    .dados-denuncia .solucao-aba-campanha>div>div {
+        max-width: 35%;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .dados-denuncia .solucao-aba-campanha>div>div {
+        max-width: 30%;
+    }
+
+}
+
+@media (max-width: 915px) {
+    .dados-denuncia .solucao-aba-campanha>div>div {
+        max-width: 55%;
+    }
+
+    .dados-denuncia .campanha-aba-campanha>ul {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .dados-denuncia .campanha-aba-campanha,
+    .dados-denuncia .solucao-aba-campanha {
+        padding: 5rem 7rem;
+    }
+
+    .dados-denuncia .problema-aba-campanha {
+        padding: 2.9rem 7rem 6rem 7rem;
+    }
+
+    .dados-denuncia .nosso-projeto {
+        padding: 0 7rem 5rem;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .dados-denuncia .solucao-aba-campanha>div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dados-denuncia .solucao-aba-campanha ul {
+        justify-content: center;
+    }
+
+    .dados-denuncia .nosso-projeto {
+        padding: 0 4rem 5rem;
+    }
+
+    .dados-denuncia .solucao-aba-campanha>div>div {
+        max-width: unset;
+    }
+
+}
+
+@media (max-width: 570px) {
+    .dados-denuncia .campanha-aba-campanha>h3 {
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .dados-denuncia .solucao-aba-campanha>div>div {
+        text-align: center;
+    }
+
 }

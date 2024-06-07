@@ -37,7 +37,7 @@ const MapComponentGot: React.FC<Props> = ({ latitude, longitude, mapId }) => {
   }, [latitude, longitude, mapId]);
 
   return (
-    <div id={mapId} style={{ height: "400px", width: "100%" }}></div>
+    <div className='map-got' id={mapId} style={{ height: "400px", width: "100%" }}></div>
   );
 };
 
