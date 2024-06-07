@@ -5,6 +5,7 @@ import { Section2 } from "@/components/Section2";
 import { Proposal } from "@/components/Proposal";
 import { Campanha } from "@/components/Campanha";
 import { Footer } from "@/components/Footer";
+import { Sistema } from "@/components/Sistema";
 
 export default function Home() {
   return (
@@ -12,7 +13,10 @@ export default function Home() {
       <Section1/>
       <Section2/>
       <Proposal/>
+
       <Campanha/>
+      <Sistema/>
+
       <Footer/>
     </main>
   );

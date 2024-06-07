@@ -2,11 +2,11 @@ import "./styles.css"
 
 
 
-export function Campanha() {
+export function Sistema() {
   return (
 
-    <div className="campanha-component">
-      <div className="campanha-aba-campanha">
+    <div className="sistema-component">
+      <div className="sistema-aba-main">
         <h1>A campanha</h1>
         <p>
           "Juntos Pelos Mares" é uma campanha abrangente e inovadora que visa transformar a maneira como lidamos com os resíduos e a poluição das águas no Brasil.
@@ -35,7 +35,6 @@ export function Campanha() {
         </ul>
 
       </div>
-      <img src="pexels-alohaphotostudio-4628309.jpg" alt="" />
     </div>
 
   );

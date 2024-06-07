@@ -1,28 +1,29 @@
-.campanha-component {
+.sistema-component {
     display: flex;
+    background-color: var(--text-light);
 }
 
-.campanha-component > img{
+.sistema-component > img{
     width: 20%;
     object-fit: cover;
 
     
 }
 
-.campanha-component .campanha-aba-campanha {
-    padding: 5rem 10rem 10rem;    
+.sistema-component .sistema-aba-main {
+    padding: 5rem 10rem;
     color: var(--text-light);
 }
 
-.campanha-component .campanha-aba-campanha>p{
+.sistema-component .sistema-aba-main>p{
     font-size: 14px;
     line-height: 22px;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     
 }
 
-.campanha-component .campanha-aba-campanha h1 {
+.sistema-component .sistema-aba-main h1 {
     margin-bottom: 6px;
     font-size: 35px;
     font-family: system-ui;
@@ -30,25 +31,25 @@
     line-height: 60px;
     font-weight: 400;
 }
-.campanha-component .campanha-aba-campanha>h3 {
+.sistema-component .sistema-aba-main>h3 {
     font-size: 25px;
     font-family: system-ui;
     line-height: 60px;
     font-weight: 400;
     margin-top: 10px;
 }
-.campanha-component .campanha-aba-campanha>ul {
+.sistema-component .sistema-aba-main>ul {
     display: flex;
     gap: 1.5rem;
     margin-left: 15px;
 }
-.campanha-component .campanha-aba-campanha>ul li {
+.sistema-component .sistema-aba-main>ul li {
     list-style: decimal;
     margin-bottom: 15px;
 }
 
 
-.campanha-component .campanha-aba-campanha>ul li img {
+.sistema-component .sistema-aba-main>ul li img {
     width: 6rem;
     height: 6rem;
     vertical-align: top;
@@ -58,7 +59,7 @@
 
 @media (max-width: 915px) {
 
-    .campanha-component .campanha-aba-campanha>ul {
+    .sistema-component .sistema-aba-main>ul {
         flex-wrap: wrap;
     }
 
@@ -66,16 +67,13 @@
 
 @media (max-width: 700px) {
 
-    .campanha-component .campanha-aba-campanha{
+    .sistema-component .sistema-aba-main{
         padding: 5rem 7rem;
     }
 }
 @media (max-width: 570px) {
-    .campanha-component .campanha-aba-campanha>h3 {
+    .sistema-component .sistema-aba-main>h3 {
         line-height: 40px;
         margin-bottom: 30px;
-    }
-    .campanha-component > img{
-        display: none;
     }
 }
