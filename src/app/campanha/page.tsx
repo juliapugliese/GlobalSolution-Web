@@ -35,6 +35,17 @@ export default function FetchPage() {
       });
   }, []);
 
+  useEffect(() => {
+    if (typeof window!== 'undefined') {
+      const handleResize = () => {
+        console.log(`Viewport width: ${window.innerWidth}`);
+      };
+      window.addEventListener('resize', handleResize);
+
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
   return (
     <div className="dados-denuncia">
       <div className="problema-aba-campanha">

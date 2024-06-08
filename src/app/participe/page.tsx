@@ -58,6 +58,17 @@ export default function Cadastro() {
     }
   }, []);
 
+  useEffect(() => {
+    if (typeof window!== 'undefined') {
+      const handleResize = () => {
+        console.log(`Viewport width: ${window.innerWidth}`);
+      };
+      window.addEventListener('resize', handleResize);
+
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
   const sendForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
