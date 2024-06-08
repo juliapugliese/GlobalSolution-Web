@@ -1,8 +1,6 @@
-'use client';
 import "./styles.css";
 import { Footer } from "@/components/Footer";
 import MapComponentGot from "@/components/MapGot";
-
 import { useState, useEffect } from "react";
 
 interface Item {
@@ -19,24 +17,23 @@ interface Item {
 export default function FetchPage() {
   const [data, setData] = useState([]);
 
-useEffect(() => {
-  if (typeof window !== 'undefined') {
-    fetch("http://localhost:8080/denuncias", {
-      method: "GET",
-    })
-      .then((response) => {
-        const json = response.json();
-        return json;
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      fetch("http://localhost:8080/denuncias", {
+        method: "GET",
       })
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.log("ERROR", error);
-      });
-  }
-}, []);
-
+        .then((response) => {
+          const json = response.json();
+          return json;
+        })
+        .then((data) => {
+          setData(data);
+        })
+        .catch((error) => {
+          console.log("ERROR", error);
+        });
+    }
+  }, []);
 
 
   return (
