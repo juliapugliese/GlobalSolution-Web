@@ -1,7 +1,5 @@
 import "./styles.css"
 
-
-
 export function Campanha() {
   return (
 
@@ -27,11 +25,6 @@ export function Campanha() {
             <img src="delete.svg" alt="ícone referente a sustentabilidade econômica" /><br />
             <b>Ações Concretas e Sustentáveis:</b> Implementar políticas públicas e incentivar ações empresariais e comunitárias voltadas para a limpeza e a preservação dos ambientes aquáticos.
           </li>
-          {/* <li>
-            <img src="groups.svg" alt="ícone referente a responsabilidade social" /><br />
-            <b>Responsabilidade Social:</b> Envolvendo todos os setores da sociedade, "Blue Future" fortalece a responsabilidade social e o engajamento cívico,
-            criando uma cultura de cuidado e respeito pelo meio ambiente.
-          </li> */}
         </ul>
 
       </div>
