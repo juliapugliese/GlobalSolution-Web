@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Blue Future",
-  description: "Recentemente inaugurada, a Blue Future surge como uma força inovadora na luta contra a poluição marinha e a degradação dos corpos d'água. ",
+  description:"Recentemente inaugurada, a Blue Future surge como uma força inovadora na luta contra a poluição marinha e a degradação dos corpos d'água.",
 };
 
 export default function RootLayout({
@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Header/>
-        {children}
+          {children}
       </body>
     </html>
   );
