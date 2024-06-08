@@ -5,29 +5,12 @@ import React, { useState, useEffect } from 'react';
 import Button from "@/components/Button";
 import FormInput from "@/components/FormInput";
 import MapComponent from "@/components/Map"
+import dynamic from 'next/dynamic';
 
+const MapComponentFiltered = dynamic(() => import('@/components/Map'), {
+  ssr: false,
+});
 
-const handleGeolocation = () => {
-  if (typeof window !== 'undefined' && 'navigator' in window) {
-    window.navigator.geolocation.getCurrentPosition(
-      (position) => {
-        console.log(position);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  } else {
-    alert("Ops Não foi possível pegar a localização");
-  }
-};
-
-
-
-interface Localizacao {
-  latitude: number;
-  longitude: number;
-}
 
 export default function Cadastro() {
   const [form, setForm] = useState({
@@ -43,11 +26,10 @@ export default function Cadastro() {
     recorrenciaProblema: "",
     comentariosAdicionais: "",
   });
-
-  const [localizacao, setLocalizacao] = useState<Localizacao | null>(null);
+  const [localizacao, setLocalizacao] = useState({latitude: 0, longitude: 0});
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'geolocation' in navigator) {
+    if (typeof window!== 'undefined' && 'geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         const { latitude, longitude } = position.coords;
         setLocalizacao({ latitude, longitude });
@@ -58,11 +40,8 @@ export default function Cadastro() {
       console.error('O navegador não suporta Geolocation.');
     }
   }, []);
-  
 
-
-
-  const sendForm = async (event: React.FormEvent<HTMLFormElement>) => {
+  const sendForm = async (event : any) => {
     event.preventDefault();
 
     try {
@@ -71,25 +50,22 @@ export default function Cadastro() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(
-          {
-            "denuncias": [
-              {
-                "comentariosAdicionais": form.comentariosAdicionais,
-                "data": new Date(),
-                "descricao": form.descricao,
-                "localizacao": localizacao ? `${localizacao.latitude},${localizacao.longitude}` : null,
-                "origemResiduo": form.origemResiduo,
-                "recorrenciaProblema": form.recorrenciaProblema,
-                "tipoIncidente": form.tipoIncidente
-              }
-            ],
-            "email": form.email,
-            "nome": form.nome,
-            "telefone": form.telefone
-          }
-
-        )
+        body: JSON.stringify({
+          "denuncias": [
+            {
+              "comentariosAdicionais": form.comentariosAdicionais,
+              "data": new Date(),
+              "descricao": form.descricao,
+              "localizacao": localizacao? `${localizacao.latitude},${localizacao.longitude}` : null,
+              "origemResiduo": form.origemResiduo,
+              "recorrenciaProblema": form.recorrenciaProblema,
+              "tipoIncidente": form.tipoIncidente
+            }
+          ],
+          "email": form.email,
+          "nome": form.nome,
+          "telefone": form.telefone
+        })
       });
 
       if (!response.ok) {
@@ -103,19 +79,18 @@ export default function Cadastro() {
     }
   };
 
-  const changeState = (type: keyof typeof form, value: any) => {
+  const changeState = (type : any, value : any) => {
     setForm(prevState => ({
-      ...prevState,
+     ...prevState,
       [type]: value
     }));
   };
-
 
   return (
     <div className="pagina-cadastro">
       <div>
         <h2>A BlueFuture usa a sua localização em tempo real para coletar os dados do local do incidente.</h2>
-        <MapComponent />
+        <MapComponentFiltered />
         <div>
           <div className="bg-b">
             <p>Fornecendo os dados do incidente você contribue para:</p>
