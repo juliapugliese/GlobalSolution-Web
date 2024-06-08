@@ -1,3 +1,4 @@
+'use client';
 import "./styles.css";
 import { Footer } from "@/components/Footer";
 import MapComponentGot from "@/components/MapGot";
