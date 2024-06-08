@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Global Solution - Blue Future
+A Global Solution é um projeto acadêmico da FIAP que introduz os alunos a um desafio onde, utilizando técnicas, ferramentas, metodologias e boas práticas trabalhadas ao longo do curso eles devem solucionar algum problema da sociedade. O objetivo é capacitá-los a pensar e desenvolver um projeto que venha trazer grandes avanços na área proposta. 
 
-## Getting Started
+### Tema da vez: 
+Engajando Tecnologia para um Futuro Sustentável nos Oceanos.
 
-First, run the development server:
+### Requisitos da disciplina Responsive Web Development:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Projeto
+Um portal inovador para denúncias de focos de poluição marinha seria uma plataforma digital dedicada à coleta, organização e divulgação de informações sobre locais afetados pela poluição. Este portal permitiria que cidadãos e organizações enviassem denúncias de focos de poluição, incluindo a localização geográfica. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Funcionalidades do Portal
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. *Interface de Envio de Denúncias:*
+   - *Formulário de Relato:* Os usuários podem preencher um formulário detalhado com informações sobre o foco de poluição, como tipo de poluição (óleo, plástico, esgoto, etc.), recorrência do problema, origem dos resíduos e uma breve descrição.
+   - *Comentário Adicional:* Campo para descrição adicional do problema, impacto observado e outras observações relevantes.
+   - *Geolocalização:* Ferramenta de mapa integrada para marcar a localização exata do foco de poluição.
+   - 
+2. *Mapeamento e Visualização:*
+   - *Mapa Interativo:* Exibição de um mapa interativo mostrando A localização em tempo real da pessoa quando a mesma esta realizano o cadastro da denúncia. E tambem mapas gerados com os dados de denuncias anteriores são disponibilizados na página de campanha.
 
-## Learn More
+3. *Verificação e Validação:*
+   - *Sistema de Classificação:* Denúncias quando recebidas geram um feedback, que seria o verificado por uma equipe especializada e atualizado conforme o status do processamento da ocorrência.
+  
+4. *Ações e Seguimentos:*
+   - *Notificações de Ações:* Informar os usuários sobre as ações tomadas em resposta às suas denúncias mediante a atualização do status da denúncia.
+  
 
-To learn more about Next.js, take a look at the following resources:
+## Características principais:
+- Conformidade com as normas do W3C: garantia padrões de qualidade e acessibilidade.
+- Modularidade e Reutilização: Através da componentização com REACT + TypeScript.
+- Layout responsivo e adaptável: Garantia de funcionalidade e aparência adequada em diferentes dispositivos.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Publicação do projeto
+[Página disponibilizada na plataforma vercel](https://global-solution-blue-future.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Resultado 
 
-## Deploy on Vercel
+[Vídeo mostrando as funcionalidades do projeto](https://youtu.be/tLX4ZKcxPiU?si=Vx5gAQeAYyy7xbCz)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Página Principal
+<img width=100% src="https://github.com/juliapugliese/GlobalSolution-Web/blob/main/Documentacao/global-solution-blue-future.vercel.app_.png" />
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Página de Cadastro
+<img width=100% src="https://github.com/juliapugliese/GlobalSolution-Web/blob/main/Documentacao/global-solution-blue-future.vercel.app_%20(4).png" />
+
+### Página da Campanha
+<img width=100% src="https://github.com/juliapugliese/GlobalSolution-Web/blob/main/Documentacao/global-solution-blue-future.vercel.app_%20(1).png" />
+
+### Página do Propósito
+<img width=100% src="https://github.com/juliapugliese/GlobalSolution-Web/blob/main/Documentacao/global-solution-blue-future.vercel.app_%20(2).png" />
+
+### Página "Parceiros"
+<img width=100% src="https://github.com/juliapugliese/GlobalSolution-Web/blob/main/Documentacao/global-solution-blue-future.vercel.app_%20(3).png" />
+
+
+# Equipe
+
+Gabriel Torres Fernandes - [gabrieltf1901](https://github.com/gabrieltf1901)
+
+Julia Gonzalez Pugliese Ribeiro - [JuliaPugliese](https://github.com/JuliaPugliese) 
+
+Lucas Ponciani Marinelli - [LucasMarinelli](https://github.com/LucasMarinelli)
+
+
+
