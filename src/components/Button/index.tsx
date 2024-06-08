@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { Props } from "./interfaces";
 import "./styles.css"
 

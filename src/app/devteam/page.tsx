@@ -1,5 +1,5 @@
-'use client'
-import "./styles.css"
+'use client';
+import "./styles.css";
 export default function DevTeam() {
 
     return (

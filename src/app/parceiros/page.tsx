@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import "./styles.css";
 import React, { useState } from 'react';
 import NavItems from "@/components/NavItems";

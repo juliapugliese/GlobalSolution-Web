@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import "./styles.css";
 import { Footer } from "@/components/Footer";
 import MapComponentGot from "@/components/MapGot";
@@ -19,7 +19,8 @@ interface Item {
 export default function FetchPage() {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
+useEffect(() => {
+  if (typeof window !== 'undefined') {
     fetch("http://localhost:8080/denuncias", {
       method: "GET",
     })
@@ -33,18 +34,10 @@ export default function FetchPage() {
       .catch((error) => {
         console.log("ERROR", error);
       });
-  }, []);
+  }
+}, []);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleResize = () => {
-        console.log(`Viewport width: ${window.innerWidth}`);
-      };
-      window.addEventListener('resize', handleResize);
 
-      return () => window.removeEventListener('resize', handleResize);
-    }
-  }, []);
 
   return (
     <div className="dados-denuncia">

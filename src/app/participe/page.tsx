@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import "./styles.css";
 import NavItems from "@/components/NavItems";
 import React, { useState, useEffect } from 'react';
@@ -6,9 +6,10 @@ import Button from "@/components/Button";
 import FormInput from "@/components/FormInput";
 import MapComponent from "@/components/Map"
 
+
 const handleGeolocation = () => {
-  if ('geolocation' in navigator) {
-    navigator.geolocation.getCurrentPosition(
+  if (typeof window !== 'undefined' && 'navigator' in window) {
+    window.navigator.geolocation.getCurrentPosition(
       (position) => {
         console.log(position);
       },
@@ -19,8 +20,8 @@ const handleGeolocation = () => {
   } else {
     alert("Ops Não foi possível pegar a localização");
   }
-
 };
+
 
 
 interface Localizacao {
@@ -58,16 +59,7 @@ export default function Cadastro() {
     }
   }, []);
 
-  useEffect(() => {
-    if (typeof window!== 'undefined') {
-      const handleResize = () => {
-        console.log(`Viewport width: ${window.innerWidth}`);
-      };
-      window.addEventListener('resize', handleResize);
 
-      return () => window.removeEventListener('resize', handleResize);
-    }
-  }, []);
 
   const sendForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

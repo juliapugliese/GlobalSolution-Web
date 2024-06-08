@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import "./styles.css"
 import NavItems from "../NavItems";
 import Link from "next/link";

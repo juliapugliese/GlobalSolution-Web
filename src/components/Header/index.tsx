@@ -1,5 +1,5 @@
-'use client'
-import "./styles.css"
+'use client';
+import "./styles.css";
 import NavItems from "../NavItems";
 import React, { useState } from 'react';
 

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import "./styles.css"
 import { useState, useEffect } from "react";
 interface Item {
@@ -18,20 +18,24 @@ export function Proposal() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/denuncias", {
-      method: "GET",
-    })
-      .then((response) => {
-        const json = response.json();
-        return json;
+    if (typeof window !== 'undefined') {
+      fetch("http://localhost:8080/denuncias", {
+        method: "GET",
       })
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.log("ERROR", error);
-      });
+        .then((response) => {
+          const json = response.json();
+          return json;
+        })
+        .then((data) => {
+          setData(data);
+        })
+        .catch((error) => {
+          console.log("ERROR", error);
+        });
+    }
   }, []);
+  
+
 
 
 
