@@ -7,7 +7,7 @@ export function Campanha() {
       <div className="campanha-aba-campanha">
         <h1>A campanha</h1>
         <p>
-          "Juntos Pelos Mares" é uma campanha abrangente e inovadora que visa transformar a maneira como lidamos com os resíduos e a poluição das águas no Brasil.
+          &quot;Juntos Pelos Mares&quot; é uma campanha abrangente e inovadora que visa transformar a maneira como lidamos com os resíduos e a poluição das águas no Brasil.
           Através de ações educativas, parcerias estratégicas e um sistema eficiente de denúncias, buscamos construir um futuro mais limpo e sustentável para nossos mares,
           rios e comunidades. Junte-se a nós nessa missão e ajude a garantir um futuro azul para as próximas gerações.
         </p>
@@ -15,7 +15,7 @@ export function Campanha() {
         <ul>
           <li>
             <img src="reciclagem.svg" alt="ícone referente a biodiversidade" /><br />
-            <b>Eliminação de Resíduos:</b> Reduzir drasticamente a quantidade de resíduos sólidos e líquidos despejados nos oceanos e cursos d'água brasileiros.
+            <b>Eliminação de Resíduos:</b> Reduzir drasticamente a quantidade de resíduos sólidos e líquidos despejados nos oceanos e cursos d&apos;água brasileiros.
           </li>
           <li>
             <img src="communication.svg" alt="ícone referente a serviços médicos" /><br />

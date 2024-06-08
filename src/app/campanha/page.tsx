@@ -36,7 +36,7 @@ export default function FetchPage() {
   }, []);
 
   useEffect(() => {
-    if (typeof window!== 'undefined') {
+    if (typeof window !== 'undefined') {
       const handleResize = () => {
         console.log(`Viewport width: ${window.innerWidth}`);
       };
@@ -83,12 +83,12 @@ export default function FetchPage() {
           </li>
           <li>
             <img src="groups.svg" alt="ícone referente a responsabilidade social" /><br />
-            <b>Responsabilidade Social:</b> Envolvendo todos os setores da sociedade, "Blue Future" fortalece a responsabilidade social e o engajamento cívico,
+            <b>Responsabilidade Social:</b> Envolvendo todos os setores da sociedade, &quot;Blue Future&quot; fortalece a responsabilidade social e o engajamento cívico,
             criando uma cultura de cuidado e respeito pelo meio ambiente.
           </li>
         </ul>
         <p>
-        &quot;Juntos Pelos Mares&quot; é uma campanha abrangente e inovadora que visa transformar a maneira como lidamos com os resíduos e a poluição das águas no Brasil.
+          &quot;Juntos Pelos Mares&quot; é uma campanha abrangente e inovadora que visa transformar a maneira como lidamos com os resíduos e a poluição das águas no Brasil.
           Através de ações educativas, parcerias estratégicas e um sistema eficiente de denúncias, buscamos construir um futuro mais limpo e sustentável para nossos mares,
           rios e comunidades. Junte-se a nós nessa missão e ajude a garantir um futuro azul para as próximas gerações.
         </p>
@@ -121,7 +121,7 @@ export default function FetchPage() {
             <li>
               <img src="padroes.svg" alt="ícone referente ao tema padrões" /><br />
               <b>Identificação de Padrões:</b><br /> Ajuda na identificação de padrões de poluição, possibilitando ações preventivas e políticas públicas mais eficazes.</li>
-            
+
             <li>
               <img src="responsabilidade.svg" alt="ícone referente ao tema responsabilização" /><br />
               <b>Transparência e Responsabilização:</b><br /> Aumenta a transparência e a responsabilização de empresas e indivíduos que causam poluição, incentivando práticas mais sustentáveis.</li>
@@ -178,7 +178,7 @@ export default function FetchPage() {
             </div>
           </div>
 
-          
+
           <div>
             <img src="naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Logo da BlueFuture" />
             <div>
@@ -190,7 +190,7 @@ export default function FetchPage() {
 
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

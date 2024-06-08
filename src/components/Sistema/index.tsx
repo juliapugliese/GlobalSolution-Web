@@ -9,7 +9,7 @@ export function Sistema() {
       <div className="sistema-aba-main">
         <h1>Sistema de Denúncia de Focos de Poluição</h1>
         <p>
-          Uma das inovações mais significativas da campanha "Blue Future" é o sistema de denúncia de focos de poluição.
+          Uma das inovações mais significativas da campanha &quot;Blue Future&quot; é o sistema de denúncia de focos de poluição.
           Este sistema permite que qualquer cidadão brasileiro possa reportar locais poluídos, ajudando a mapear e combater a
           poluição de maneira eficaz. O sistema inclui:
 
