@@ -11,7 +11,6 @@ const MapComponentFiltered = dynamic(() => import('@/components/Map'), {
   ssr: false,
 });
 
-
 export default function Cadastro() {
   const [form, setForm] = useState({
     nome: "",
@@ -29,7 +28,7 @@ export default function Cadastro() {
   const [localizacao, setLocalizacao] = useState({latitude: 0, longitude: 0});
 
   useEffect(() => {
-    if (typeof window!== 'undefined' && 'geolocation' in navigator) {
+    if (typeof window !== 'undefined' && 'geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         const { latitude, longitude } = position.coords;
         setLocalizacao({ latitude, longitude });
@@ -56,7 +55,7 @@ export default function Cadastro() {
               "comentariosAdicionais": form.comentariosAdicionais,
               "data": new Date(),
               "descricao": form.descricao,
-              "localizacao": localizacao? `${localizacao.latitude},${localizacao.longitude}` : null,
+              "localizacao": localizacao ? `${localizacao.latitude},${localizacao.longitude}` : null,
               "origemResiduo": form.origemResiduo,
               "recorrenciaProblema": form.recorrenciaProblema,
               "tipoIncidente": form.tipoIncidente
@@ -81,10 +80,11 @@ export default function Cadastro() {
 
   const changeState = (type : any, value : any) => {
     setForm(prevState => ({
-     ...prevState,
+      ...prevState,
       [type]: value
     }));
   };
+
 
   return (
     <div className="pagina-cadastro">
