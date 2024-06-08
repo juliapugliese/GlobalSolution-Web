@@ -47,7 +47,7 @@ export default function Cadastro() {
   const [localizacao, setLocalizacao] = useState<Localizacao | null>(null);
 
   useEffect(() => {
-    if ('geolocation' in navigator) {
+    if (typeof window !== 'undefined' && 'geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         const { latitude, longitude } = position.coords;
         setLocalizacao({ latitude, longitude });
@@ -58,6 +58,7 @@ export default function Cadastro() {
       console.error('O navegador não suporta Geolocation.');
     }
   }, []);
+  
 
 
 

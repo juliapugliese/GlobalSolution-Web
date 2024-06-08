@@ -3,6 +3,12 @@ import "./styles.css";
 import { Footer } from "@/components/Footer";
 import MapComponentGot from "@/components/MapGot";
 import { useState, useEffect } from "react";
+import dynamic from 'next/dynamic';
+
+const MapComponentGotWithNoSSR = dynamic(() => import('@/components/MapGot'), {
+  ssr: false,
+});
+
 
 interface Item {
   id: number;
@@ -140,7 +146,7 @@ export default function FetchPage() {
 
             return (
               <div key={item.id}>
-                <MapComponentGot mapId={uniqueMapId} latitude={parseFloat(latitude)} longitude={parseFloat(longitude)} />
+                <MapComponentGotWithNoSSR mapId={uniqueMapId} latitude={parseFloat(latitude)} longitude={parseFloat(longitude)} />
                 <div>
                   <h2>{item.data}</h2>
                   <h2>{item.tipoIncidente}</h2>
