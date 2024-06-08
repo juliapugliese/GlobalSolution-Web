@@ -158,7 +158,7 @@ export default function FetchPage() {
 
 
           <div>
-            <img src="naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Logo da BlueFuture" />
+            <img src="mapa.png" alt="Foto de exemplo" />
             <div>
               <h2>20-12-23</h2>
               <h2>Derramaneto Petroleo</h2>
@@ -167,7 +167,7 @@ export default function FetchPage() {
           </div>
 
           <div>
-            <img src="naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Logo da BlueFuture" />
+            <img src="mapa.png" alt="Foto de exemplo" />
             <div>
               <h2>20-12-23</h2>
               <h2>Derramaneto Petroleo</h2>
@@ -177,7 +177,7 @@ export default function FetchPage() {
 
 
           <div>
-            <img src="naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Logo da BlueFuture" />
+            <img src="mapa.png" alt="Foto de exemplo" />
             <div>
               <h2>20-12-23</h2>
               <h2>Derramaneto Petroleo</h2>
