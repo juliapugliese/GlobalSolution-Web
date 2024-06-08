@@ -12,7 +12,7 @@ const Proposito = () => {
         <p>
  
           Recentemente inaugurada, a <b>Blue Future </b> surge como uma força inovadora na luta contra
-          a poluição marinha e a degradação dos corpos d'água. Com uma visão clara e um propósito bem
+          a poluição marinha e a degradação dos corpos d&apos;água. Com uma visão clara e um propósito bem
           definido, a Blue Future dedica-se a proteger os ecossistemas marinhos e promover práticas
           sustentáveis, abordando de frente os desafios impostos pela poluição por plásticos.
           Com sede em uma cidade costeira comprometida com a preservação ambiental, a organização reúne

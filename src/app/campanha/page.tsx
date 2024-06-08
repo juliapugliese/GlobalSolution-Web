@@ -63,15 +63,15 @@ export default function FetchPage() {
       <div className="campanha-aba-campanha">
         <h1>A campanha</h1>
         <p>
-          A campanha <b>"Juntos Pelos Mares"</b> da Blue Future é uma iniciativa nacional focada na preservação e recuperação dos ecossistemas marinhos e das águas brasileiras.
-          Diferente de outras campanhas que se concentram apenas na poluição por plásticos, "Juntos Pelos Mares" aborda a questão de todos os tipos de resíduos que ameaçam nossos mares,
+          A campanha <b>&quot;Juntos Pelos Mares&quot;</b> da Blue Future é uma iniciativa nacional focada na preservação e recuperação dos ecossistemas marinhos e das águas brasileiras.
+          Diferente de outras campanhas que se concentram apenas na poluição por plásticos, &quot;Juntos Pelos Mares&quot; aborda a questão de todos os tipos de resíduos que ameaçam nossos mares,
           rios e costas.
         </p>
         <h3>Importância da campanha</h3>
         <ul>
           <li>
             <img src="plant.svg" alt="ícone referente a biodiversidade" /><br />
-            <b>Proteção da Biodiversidade:</b> Ao combater a poluição de todas as formas, a campanha "Blue Future" ajuda a preservar a rica biodiversidade marinha
+            <b>Proteção da Biodiversidade:</b> Ao combater a poluição de todas as formas, a campanha &quot;Blue Future&quot; ajuda a preservar a rica biodiversidade marinha
             e fluvial do Brasil, garantindo a sobrevivência de inúmeras espécies.</li>
           <li>
             <img src="medical_services.svg" alt="ícone referente a serviços médicos" /><br />
@@ -88,7 +88,7 @@ export default function FetchPage() {
           </li>
         </ul>
         <p>
-          "Juntos Pelos Mares" é uma campanha abrangente e inovadora que visa transformar a maneira como lidamos com os resíduos e a poluição das águas no Brasil.
+        &quot;Juntos Pelos Mares&quot; é uma campanha abrangente e inovadora que visa transformar a maneira como lidamos com os resíduos e a poluição das águas no Brasil.
           Através de ações educativas, parcerias estratégicas e um sistema eficiente de denúncias, buscamos construir um futuro mais limpo e sustentável para nossos mares,
           rios e comunidades. Junte-se a nós nessa missão e ajude a garantir um futuro azul para as próximas gerações.
         </p>
