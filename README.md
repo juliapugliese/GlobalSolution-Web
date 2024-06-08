@@ -5,7 +5,7 @@ A Global Solution é um projeto acadêmico da FIAP que introduz os alunos a um d
 Engajando Tecnologia para um Futuro Sustentável nos Oceanos.
 
 ### Requisitos da disciplina Responsive Web Development:
-
+A atividade proposta envolve a criação de uma aplicação web, utilizando o conceito de SPA (Single Page Application), com base no problema acima exposto, utilizando REACT + TYPESCRIPT + NEXTJS + API JAVAWEB como parte da solução do problema proposto.
 
 # Projeto
 Um portal inovador para denúncias de focos de poluição marinha seria uma plataforma digital dedicada à coleta, organização e divulgação de informações sobre locais afetados pela poluição. Este portal permitiria que cidadãos e organizações enviassem denúncias de focos de poluição, incluindo a localização geográfica. 
