@@ -42,8 +42,8 @@ export function Proposal() {
   return (
     <section className="proposal">
       <div className="image-proposal">
-        <img src="pexels-francesco-ungaro-3172277.jpg" alt="icone de lupa" />
-        <img src="pexels-peterorpete-66218.jpg" alt="icone de lupa" />
+        <img src="poluicao-agua.jpg" alt="icone de lupa" />
+        <img src="denuncia1.jpeg" alt="icone de lupa" />
       </div>
 
 
@@ -72,8 +72,8 @@ export function Proposal() {
 
         <div>
           <h2>20-12-23</h2>
-          <h2>Derramaneto Petroleo</h2>
-          <p>Visto perto da area costeira</p>
+          <h2>Descarte de lixo</h2>
+          <p>Visto perto da nas margens do rio</p>
         </div>
       </div>
 
