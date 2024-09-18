@@ -17,7 +17,7 @@ export function Header() {
             </div>
             <nav className={`nav ${isNavActive ? 'active' : ''}`}>
                 <div>
-                    <NavItems link="page.tsx" id="logo" img={<img src="logo.svg" alt="Logo da BlueFuture"/>}/>
+                    <NavItems link="/" id="logo" img={<img src="logo.svg" alt="Logo da BlueFuture"/>}/>
                     <button className="hamburguer" onClick={() => setIsNavActive(!isNavActive)}></button>
 
                     <ul className="ul1">
